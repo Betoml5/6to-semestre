@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../estilos/ejercicio-1/css/index.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Diseñando con CCS3</h1>
+      <h2>Diseño Web - Unidad 3</h2>
+    </header>
+    <nav>
+      <a  href="../../ejercicio-tablas/comparativa.html">Ejercicio 1</a>
+      <a href="../../jamon-nuez/index.html">Ejercicio 2</a>
+      <a  class="selected" href="../../caracteres/index.html">Ejercicio 3</a>
+      <a href="../../chino/index.html">Ejercicio 4</a>
+      <a href="../../formularios/index.html">Ejercicio 5</a>
+      <a href="../fotos-linea/index.html">Ejericio 6</a>
+      <a href="../solicitud-empleo/index.html">Ejericio 7</a>
+      <a href="../inicio-sesion/index.html">Ejericio 8</a>
+    </nav>
+    <h2>Caracteres</h2>
+    <p>
+        Si necesitamos incluir en nuestros textos signos que tienen un significado especial en HTML, (por ej. "&lt;")
+    </p>
+    <p>
+        Por ejemplo para mostrar el signo "&lt;" en un texto, se debe escribir "&amp;lt;
+    </p>
+    <h2>Ejemplos de caracteres especiales</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Resultado</th>
+          <th>Descripcion</th>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tr>
+        <td></td>
+        <td>
+          Espacio en blanco <br />
+          <i>Non-breaking space</i> &nbsp;
+        </td>
+        <td>&ampnbsp;</td>
+      </tr>
+      <tr>
+        <td>
+            &lt;
+        </td>
+        <td>
+          Menor que<br />
+          <i>lesser than</i> &nbsp;
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+            &gt;
+        </td>
+        <td>
+          Mayor que <br />
+          Greater than &nbsp;
+        </td>
+        <td>&ampgt;</td>
+      </tr>
+      <tr>
+        <td>
+            &amp;
+        </td>
+        <td>
+          
+        </td>
+        <td>&ampamp;</td>
+      </tr>
+      <tr>
+        <td>
+            &copy;
+        </td>
+        <td>
+          Derecho de autor <br />
+          <i>copyright</i>
+        </td>
+        <td>&ampcopy;</td>
+      </tr>
+      <tr>
+        <td>
+            &aacute;
+        </td>
+        <td>
+          a minuscula con acento
+        </td>
+        <td>&ampaacute;</td>
+      </tr>
+      <tr>
+        <td>Ñ</td>
+        <td>
+            Ñ mayuscula
+        </td>
+        <td>&ampNtilde;</td>
+      </tr>
+    </table>
+    <p>De esta forma, si se considera el siguiente texto:</p>
+    <small>Los caracteres &lt;, &gt;, y &amp; pueden dar problemas con los textos en HTML</small>
+    <p>Para mostrar correctamente el texto anterior en una pagina HTML, se debe sustituir cada caracter especial</p>
+    <small> &lt;p&gt; Los caracteres &amplt; &ampgt; &ampquot; y &ampamp; pueden dar problemas con los textos en HTML &lt;/p&gt;</small>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../estilos/ejercicio-1/css/index.css" />
+    <title>Solicitud de empleo</title>
+  </head>
+  <body>
+    <header>
+      <h1>Diseñando con CCS3</h1>
+      <h2>Diseño Web - Unidad 3</h2>
+    </header>
+    <nav>
+      <a href="../../ejercicio-tablas/comparativa.html">Ejercicio 1</a>
+      <a href="../../jamon-nuez/index.html">Ejercicio 2</a>
+      <a href="../../caracteres/index.html">Ejercicio 3</a>
+      <a href="../../chino/index.html">Ejercicio 4</a>
+      <a href="../../formularios/index.html">Ejercicio 5</a>
+      <a href="../fotos-linea/index.html">Ejericio 6</a>
+      <a class="selected" href="../solicitud-empleo/index.html">Ejericio 7</a>
+      <a href="../inicio-sesion/index.html">Ejericio 8</a>
+    </nav>
+
+    <h2>Rollitos de jamon y nuez</h2>
+
+    <fieldset>
+      <legend>Fotografia</legend>
+      <img src="" alt="Perfil" /><br />
+      <input type="file" name="imagen" id="imagen" />
+    </fieldset>
+    <fieldset>
+      <legend>Datos personales</legend>
+      <label for="apellido_paterno">Apellido paterno</label>
+      <input type="text" id="apellido_paterno" />
+      <label for="apellido_materno">Apellido Materno</label>
+      <input type="text" id="apellido_materno" />
+      <label for="nombre">Nombre(s): </label>
+      <input type="text" id="nombre" /><br />
+      <label for="fechaNacimiento">Fecha de nacimiento</label>
+      <input type="date" name="date" id="fechaNacimiento" /><br />
+      <label for="edad">Edad</label>
+      <input type="number" name="edad" id="edad" /><br />
+      <label for="sexo">Sexo</label>
+      <input type="radio" name="sexo" />
+      <label for="masculino">Masculino</label>
+      <input type="radio" name="sexo" /> <label for="femenino">Femenino</label
+      ><br />
+      <label for="direccion">Direccion</label>
+      <input
+        type="text"
+        placeholder="Calle numbero, colonia"
+        id="direccion"
+      /><br />
+      <label for="estado">Estado</label>
+      <select name="estado" id="estado">
+        <option value="aguascalientes">Aguascalientes</option>
+      </select>
+      <br />
+      <select name="municipio" id="municipio">
+        <option value="Rosita">Seleccione</option>
+      </select>
+      <label for="telefono">Telefono:</label>
+      <input type="tel" id="telefono" /><br />
+      <label for="correo">Correo electronico: </label>
+      <input type="email" name="correo" id="correo" />
+    </fieldset>
+    <fieldset>
+      <legend>Datos del puesto</legend>
+      <label for="fecha">Fecha: </label>
+      <select name="" id="fecha">
+        <option value="">1</option>
+      </select>
+      <label for="">de</label>
+      <select name="" id="">
+        <option value="">Enero</option>
+      </select>
+      <label for="">de</label>
+      <select name="" id="">
+        <option value="">2000</option></select
+      ><br />
+      <label for="puesto">Puesto que solicita</label>
+      <input type="text" id="puesto" /><br />
+      <label for="sueldo">Sueldo deseado</label>
+      <span>$</span><input type="number" name="" id="sueldo" /><br />
+      <label for="razones"
+        >Escriba las razones por las cuales cree que merece este puesto</label
+      ><br />
+      <textarea name="" id="razones" cols="30" rows="10"></textarea>
+    </fieldset>
+    <input type="checkbox" name="" id="confirmacion" /><label for="confirmacion"
+      >Confirmo que los datos son reales</label
+    >
+    <br />
+    <button id="btnEnviar">Enviar solicitud</button>
+    <button>Cancelar</button>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../diseñoweb/estilos/ejercicio-1/css/index.css">
+    <title>Diseño Web</title>
+  </head>
+  <body>
+    <header>
+      <h1>Diseñando con CCS3</h1>
+      <h2>Diseño Web - Unidad 3</h2>
+    </header>
+    <nav>
+      <a href="../../ejercicio-tablas/comparativa.html">Ejercicio 1</a>
+      <a href="../../jamon-nuez/index.html">Ejercicio 2</a>
+      <a href="../../caracteres/index.html">Ejercicio 3</a>
+      <a href="../../chino/index.html">Ejercicio 4</a>
+      <a href="../../formularios/index.html">Ejercicio 5</a>
+      <a href="../fotos-linea/index.html">Ejericio 6</a>
+      <a href="../solicitud-empleo/index.html">Ejericio 7</a>
+      <a href="../inicio-sesion/index.html">Ejericio 8</a>
+    </nav>
+
+    <h2>Etiquetas de formato</h2>
+
+   
+    <p>
+      En el
+      <abbr
+        title="Instituto Tecnologico de Estudios Superiores de la Región Carbonifera"
+        >TecNM Campus Región Carbonifera</abbr
+      >
+      se imparte la carrera de <abbr>ISC</abbr>
+      <del>borrado</del>
+      <mark>marcado</mark>
+      <cite>Lo dije yo</cite>
+      <small>Chiquito</small>
+      <ins>insertado</ins>
+      <i>Italic</i>
+      <b>Negritas</b>
+      <blockquote>Hola a todes</blockquote>
+    </p>
+    <p><q> El libro llamado el alquimista escrito por Paulo Cockelo</q></p>
+
+    <input type="text" id="title" name="name" />
+    <input type="text" id="description" name="description" />
+    <button id="btnAdd">Agregar componente</button>
+    <button id="cleanBtn" onclick="cleanContainer()">
+      Limpiar componentes
+    </button>
+
+    <div class="flex flex-col" id="container">
+      <label for="">Mi lista</label>
+      <input type="text" id="listinput">
+      <button onclick="addItemsToList()">Agregar</button>
+      <button onclick="deleteItemFromList()">Eliminar ultimo elemento</button>
+      <ul id="list">
+        <li>Hola <button>Eliminar</button></li>
+        <li>Como estas <button>Eliminar</button></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Enanitos</h3>
+      <p>Por ejemplo, los siete enanitos son:</p>
+      <ol>
+        <li>Sabio</li>
+        <li>Estornudo</li>
+        <li>Feliz</li>
+        <li>Timido</li>
+        <li>Gruñon</li>
+        <li>Dormilon</li>
+        <p>Y finalmente...</p>
+        <li>Tontin</li>
+      </ol>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

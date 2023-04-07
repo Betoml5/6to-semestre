@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../estilos/ejercicio-1/css/index.css" />
+    <title>Formularios</title>
+  </head>
+  <body>
+    <header>
+      <h1>Diseñando con CCS3</h1>
+      <h2>Diseño Web - Unidad 3</h2>
+    </header>
+    <nav>
+      <a href="../../ejercicio-tablas/comparativa.html">Ejercicio 1</a>
+      <a href="../../jamon-nuez/index.html">Ejercicio 2</a>
+      <a href="../../caracteres/index.html">Ejercicio 3</a>
+      <a href="../../chino/index.html">Ejercicio 4</a>
+      <a class="selected" href="../../formularios/index.html">Ejercicio 5</a>
+      <a href="../fotos-linea/index.html">Ejericio 6</a>
+      <a href="../solicitud-empleo/index.html">Ejericio 7</a>
+      <a href="../inicio-sesion/index.html">Ejericio 8</a>
+    </nav>
+
+    <h2>Etiquetas de formularios</h2>
+
+    <form>
+      <fieldset>
+        <legend>Datos del alumno</legend>
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Alberto"
+        /><br />
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" placeholder="10" /><br />
+        <label for="genero">Genero</label><br />
+        <input type="radio" name="genero" id="mas" />
+        <label for="genero">Masculino</label><br />
+        <input type="radio" name="genero" id="fem" />
+        <label for="genero">Femenino</label><br />
+        <label for="color">Color favorito</label>
+        <input type="color" name="color" id="color" /> <br />
+        <label for="picture">Imagen</label>
+        <input type="file" /><br />
+        <label for="birthday">Fecha de nacimiento</label>
+        <input type="date" id="birthday" /> <br />
+        <label for="caracter">Describe tu caracter</label> <br />
+        <textarea name="caracter" id="caracter" cols="30" rows="10"></textarea>
+        <br />
+        <label for="telefono">Telefono:</label> <br />
+        <input type="tel" id="telefono" /><br />
+        <label for="correo">Correo electronico</label> <br />
+        <input type="email" id="correo" /><br />
+        <label for="">Selecciona las materias que cursas</label> <br />
+        <input type="checkbox" name="" id="diseño" /><label for="diseño"
+          >Diseño Web
+        </label>
+        <br />
+        <input type="checkbox" name="" id="r" /><label for="r">Redes </label>
+        <br />
+
+        <input type="checkbox" name="" id="i" /><label for="i">Ingles </label>
+        <br />
+
+        <input type="checkbox" name="" id="bd" /><label for="bd"
+          >Taller de base de datos </label
+        ><br />
+        <label for="contraseña">Contraseña</label> <br />
+        <input type="password" id="contraseña" /> <br />
+        <label for="promedio">Prom&nbsp;edio</label><br />
+        <input type="range" min="0" max="100" id="promedio" />
+      </fieldset>
+
+      <button type="submit">Enviar</button>
+      <button type="reset">Reset</button>
+    </form>
+    <script>
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const nombre = document.querySelector("#nombre").value;
+        const edad = document.querySelector("#edad").value;
+        const color = document.querySelector("#color").value;
+        const genero = document.querySelector("#genero");
+        const range = document.querySelector("#range");
+
+        range.addEventListener("change", (e) => {
+          console.log(e.target.value);
+          console.log("changing");
+        });
+
+        if (edad > 45) {
+          form.innerHTML += `<p>${nombre} tiene ${edad} años su color favorito es ${color}</p>`;
+          return;
+        }
+        form.innerHTML += `<p>${nombre} tiene ${edad} años y su color favorito es ${color}</p>`;
+      });
+    </script>
+  </body>
+</html>
