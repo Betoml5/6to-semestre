@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Especificidad</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      p {
+        color: red;
+      }
+      .clase {
+        color: yellow;
+      }
+      #color {
+        color: blue;
+      }
+      p .clase {
+        color: green;
+      }
+
+      .main {
+        background-color: green;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="clase">Hola</p>
+    <p style="color: red"></p>
+
+    <main class="main">
+      <section class="card"></section>
+    </main>
+  </body>
+</html>

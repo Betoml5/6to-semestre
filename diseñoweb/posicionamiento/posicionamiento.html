@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Posicionamiento</title>
+  </head>
+
+  <body>
+    <h2>position:static;</h2>
+    <p>
+      Un elemento con este tipo de posicionamiento simplemente se dispone en el
+      orden normal en el que aparece en la página y ocupa todo el espacio que
+      necesita.
+    </p>
+    <div class="static">Este elemento tiene posicionamiento estático</div>
+    <h2>position:relative;</h2>
+    <p>
+      Un elemento con position:relative se coloca en principio igual que
+      cualquier elemento estático; de bloque o insertado. Pero entonces sucede
+      algo muy interesante: la caja generada se desplaza según las propiedades
+      top, bottom, left y right.
+    </p>
+
+    <p>
+      Lo que hay que recordar sobre el posicionamiento relativo es que sólo se
+      desplaza la caja generada. El elemento sigue estando allí donde estaba en
+      el flujo del documento estático. Aquí es donde "ocupa espacio" respecto a
+      los otros elementos. Eso significa que la caja desplazada puede acabar
+      encima de otras cajas de elementos, ya que éstas siguen actuando como si
+      el elemento con un posicionamiento relativo se hubiera quedado donde debía
+      estar antes de aplicar el posicionamiento. Respecto al flujo del
+      documento, el elemento no se ha movido; es sólo el resultado visual final
+      lo que muestra la caja desplazada.
+    </p>
+    <div class="relative">Este elemento tiene posicionamiento relativo</div>
+    <h2>position:absolute;</h2>
+    <p>
+      Si un elemento posicionado absolutamente no tiene un antepasado
+      posicionado, entonces el bloque contenedor es lo que se llama bloque
+      contenedor inicial, que en la práctica equivale al elemento html.
+    </p>
+    <p>
+      Pasos para encontrar el bloque contenedor de un elemento con
+      position:absolute;
+    </p>
+    <ol>
+      <li>
+        Mira el elemento padre del elemento posicionado abolutamente. Si éste
+        tiene posicionamiento fixed, absolute o relative haz encontrado el
+        elemento contenedor.
+      </li>
+      <li>
+        En caso contrario, verifica el elemento padre del padre y empieza de
+        nuevo desde el paso 1 hasta encontrar el elemento contenedor o se haya
+        quedado sin antepasados.
+      </li>
+      <li>Si llegaste al elemento html, entonces este es el contenedor.</li>
+    </ol>
+    <div class="relative1">
+      Elemento con posicionamiento relative.
+      <div class="absolute">Elemento con posicionamiento absoluto</div>
+    </div>
+    <h2>position:fixed;</h2>
+    <p>
+      Los elementos con posicionamiento fijo están fijos en relación con la
+      ventana del navegador en vez de estarlo en relación con el elemento que lo
+      contiene; incluso si se desplaza la página, se mantienen exactamente en la
+      misma posición en la ventana del navegador.
+    </p>
+    <div class="fixed">Elemento fijo</div>
+    <h2>position:sticky;</h2>
+    <p>
+      Los elementos con posicionamiento sticky se comportan como elementos con
+      posicionamiento relative hasta que se desplaza fuera de la ventana del
+      navegador, en cuyo caso se comporta como un elemento con posicionamiento
+      fixed.
+    </p>
+    <div class="sticky">Elemento sticky</div>
+  </body>
+</html>
