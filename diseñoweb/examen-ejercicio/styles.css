@@ -60,7 +60,7 @@ body {
   text-decoration: none;
 }
 
-.header img {
+.header .header__logo-item img {
   width: 25px;
   height: 25px;
 }
