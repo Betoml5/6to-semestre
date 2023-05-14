@@ -1,0 +1,143 @@
+:root {
+  /* declare var */
+  --color-primario: #89cdfa;
+  --color-secundario: #7ab229;
+  --color-terciario: #3d5898;
+  --color-cuaternario: #46b0e2;
+  --color-quintenario: #de4e36;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--color-primario);
+}
+
+#iniciarSesion {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 80px 40px;
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 875px;
+  height: 425px;
+
+  background-image: url("./Assets/adorner1.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-color: #fff;
+}
+
+#iniciarSesion h1 {
+  color: #cec8cb;
+
+  font-weight: 300;
+  font-size: 20px;
+
+  margin-bottom: 20px;
+}
+
+#iniciarSesion input {
+  padding: 10px;
+  margin: 14px 0px;
+}
+
+#iniciarSesion input[type="button"] {
+  border: none;
+  border-radius: 2px;
+
+  padding: 12px;
+  color: #fff;
+  background-color: var(--color-secundario);
+}
+
+#iniciarSesion img {
+  position: absolute;
+
+  left: -50px;
+  top: 20px;
+  width: 200px;
+  height: 350px;
+}
+
+#correo {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 130px;
+  padding-right: 90px;
+}
+
+#redesSociales {
+  display: flex;
+  flex-direction: column;
+}
+
+#redesSociales h2 {
+  color: var(--color-primario);
+
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#redesSociales a:nth-of-type(1) {
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 70px;
+
+  border-radius: 2px;
+  margin: 14px 0px;
+
+  color: #fff;
+  text-decoration: none;
+
+  background-color: var(--color-terciario);
+  background-image: url("./Assets/facebook.png");
+  background-repeat: no-repeat;
+  background-position: 3px;
+}
+#redesSociales a:nth-of-type(2) {
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 70px;
+
+  border-radius: 2px;
+  margin: 14px 0px;
+
+  color: #fff;
+  text-decoration: none;
+
+  background-color: var(--color-primario);
+  background-image: url("./Assets/twitter.png");
+  background-repeat: no-repeat;
+  background-position: 3px;
+}
+#redesSociales a:nth-of-type(3) {
+  padding: 10px;
+
+  padding-left: 50px;
+  padding-right: 70px;
+
+  border-radius: 2px;
+  margin: 14px 0px;
+
+  color: #fff;
+  text-decoration: none;
+
+  background-color: var(--color-quintenario);
+  background-image: url("./Assets/gplus.png");
+  background-repeat: no-repeat;
+  background-position: 3px;
+}

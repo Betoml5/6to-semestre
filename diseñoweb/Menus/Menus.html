@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Menús</title>
+    <script src="https://kit.fontawesome.com/c5fc41277f.js" crossorigin="anonymous"></script>
+    <link href="Estilos.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!-- MENU DESPLEGABLE HORIZONTAL -->
+
+    <nav class="menuHorizontal">
+        <ol>
+            <li><a href="#"><i class="fa fa-home"></i> Principal</a></li>
+            <li>
+                <a href="#"><i class="fa fa-clipboard"></i> Edición</a>
+                <ul>
+                    <li><a href="#"><i class="fa fa-cut"></i>Cortar</a></li>
+                    <li><a href="#"><i class="fa fa-copy"></i>Copiar</a></li>
+                    <li><a href="#"><i class="fa fa-paste"></i>Pegar</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-pencil"></i>Formato</a>
+                <ul>
+                    <li><a href="#"><i class="fa fa-bold"></i>Negrita</a></li>
+                    <li><a href="#"><i class="fa fa-italic"></i>Cursiva</a></li>
+                    <li><a href="#"><i class="fa fa-underline"></i>Subrayado</a></li>
+                    <li><a href="#"><i class="fa fa-strikethrough"></i>Tachado</a></li>
+                    <li><a href="#"><i class="fa fa-subscript"></i>Subindice</a></li>
+                    <li><a href="#"><i class="fa fa-superscript"></i>Superindice</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-youtube-play"></i>Reproducir</a>
+                <ul>
+                    <li><a href="#"><i class="fa fa-play"></i>Reproducir</a></li>
+                    <li><a href="#"><i class="fa fa-pause"></i>Pausar</a></li>
+                    <li><a href="#"><i class="fa fa-stop"></i>Detener</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-gear"></i>Configuración</a>
+        </ol>
+    </nav>
+
+    <main>
+        <h1>Ejercicio de Menús</h1>
+    </main>
+
+    <nav class="desplegable">
+
+        <label for="checkdesplegable"><i class="fa fa-bars"></i></label>
+        <input type="checkbox" id="checkdesplegable" />
+
+        <div class="panel">
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i>Google Plus</a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i>Youtube</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <nav class="colapsable">
+
+        <ul>
+            <li>
+                <a href="#menu1"><i class="fa fa-users"></i>Usuarios</a>
+                <ul id="menu1">
+                    <li><a href="#"><i class="fa fa-user-plus"></i> Agregar</a></li>
+                    <li><a href="#"><i class="fa fa-user-times"></i> Eliminar</a></li>
+                    <li><a href="#"><i class="fa fa-users"></i> Ver </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#menu2"><i class="fa fa-cart-arrow-down"></i>Carrito de compras</a>
+                <ul id="menu2">
+                    <li><a href="#"><i class="fa fa-cart-plus"></i> Agregar</a></li>
+                    <li><a href="#"><i class="fa fa-cart-arrow-down"></i> Ver</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#menu3"><i class="fa fa-bar-chart"></i>Gráficas</a>
+                <ul id="menu3">
+                    <li><a href="#"><i class="fa fa-bar-chart"></i> De barras</a></li>
+                    <li><a href="#"><i class="fa fa-pie-chart"></i> De pastel</a></li>
+                    <li><a href="#"><i class="fa fa-line-chart"></i> De lineas</a></li>
+                    <li><a href="#"><i class="fa fa-area-chart"></i> De areas</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </nav>
+</body>
+</html>
