@@ -1,9 +1,4 @@
-﻿* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
+﻿html {
   background-color: rgb(87, 251, 87);
 }
 
@@ -12,6 +7,7 @@ body {
   margin: 0;
   height: 100%;
   padding-top: 30px;
+  overflow: hidden;
 }
 
 .menuHorizontal {
@@ -26,7 +22,7 @@ body {
   padding-left: 15px;
 }
 
-.menuHorizontal ol li {
+.menuHorizontal ol > li {
   width: 120px;
   float: left;
   line-height: 30px;
@@ -38,44 +34,131 @@ body {
   text-decoration: none;
   display: block;
   height: 30px;
-  padding-left: 10px;
+  width: 118px;
 }
 
-.menuHorizontal ul li {
-  background-color: gray;
+.menuHorizontal ol li ul li a {
+  color: black;
   text-decoration: underline;
 }
 
 .menuHorizontal ol li a:hover {
-  background-color: aquamarine;
+  background-color: #ff8c00;
+}
+
+.menuHorizontal ul li {
+  background-color: #d3d3d3;
   color: black;
 }
 
 .menuHorizontal ol li:hover ul {
   display: block;
-  background-color: gray;
-  list-style: none;
-  color: black;
 }
 
-.menuHorizontal ol li a:hover ul {
+a i {
+  margin-right: 2.5px;
   display: block;
-  background-color: gray;
-  list-style: none;
-  color: black;
+  width: 20px;
+  margin-left: 2.5px;
 }
 
-.menuHorizontal ul {
+.menuHorizontal ol li ul {
   display: none;
   padding: 0;
-  margin: 0;
-
-  clear: both;
-
-  border: 5px solid red;
+  border: 1px solid black;
+  list-style: none;
 }
 
 ol,
 ul {
   margin: 0;
+}
+
+.desplegable label {
+  height: 30px;
+  position: absolute;
+  top: 0;
+  color: white;
+  right: 0;
+  line-height: 30px;
+  width: 30px;
+}
+
+#checkdesplegable {
+  display: none;
+}
+
+#checkdesplegable:checked + .panel {
+  right: 0;
+}
+
+.panel {
+  background-color: black;
+  width: 150px;
+  height: calc(100% - 30px);
+  position: absolute;
+  right: -150px;
+  top: 30px;
+  transition: all 0.5s;
+}
+
+.panel ul {
+  padding: 0;
+  margin: 20px 0px 0px 10px;
+  list-style: none;
+}
+
+.panel ul li {
+  margin-top: 10px;
+}
+
+.panel ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.panel ul li a i {
+  margin-right: 5px;
+}
+
+.colapsable {
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 200px;
+  height: 400px;
+}
+
+.colapsable ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.colapsable > ul > li > a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  line-height: 29px;
+  background-color: gray;
+  border-bottom: 1px solid black;
+  padding-left: 5px;
+}
+
+.colapsable ul ul {
+  height: 0;
+  overflow: hidden;
+
+  transition: all 300ms ease-in-out;
+}
+
+.colapsable ul ul li {
+  margin: 10px 0px;
+}
+
+.colapsable ul ul a {
+  text-decoration: none;
+}
+
+.colapsable ul ul:target {
+  height: 310px;
 }

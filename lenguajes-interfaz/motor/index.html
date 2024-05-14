@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Evitar refrescar la página</title>
+  </head>
+  <body>
+    <h1><span id="nivelAgua"></span></h1>
+
+    <script>
+      const $nivelAgua = document.querySelector("#nivelAgua");
+
+      const updateNivelAgua = async () => {
+        const response = await fetch("http://192.168.1.111:3000/nivelAgua");
+        const nivelAgua = await response.text();
+        console.log(nivelAgua);
+        $nivelAgua.textContent = nivelAgua;
+      };
+
+      // Ejecuta la función inicialmente
+      updateNivelAgua();
+
+      // Crea un intervalo para actualizar el nivel de agua cada segundo
+      setInterval(updateNivelAgua, 2000);
+    </script>
+  </body>
+</html>

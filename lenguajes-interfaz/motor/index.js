@@ -1,37 +1,33 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const fs = require("fs/promises");
+const path = require("path");
+
 app.use(cors("*"));
-app.use(express.json());
 
-//static
+var db = [];
 
+app.get("/", (req, res) => {
+  const { q } = req.query;
 
-app.get("/agua", (req, res) => {
-  res.send("Hello World from agua!");
+  const nivelAgua = q;
+  db.push(nivelAgua);
+
+  fs.writeFile(path.join(__dirname, "db.json"), nivelAgua, "utf8");
+  res.send("Nivel de agua: " + nivelAgua);
 });
 
-app.post("/nivel-agua", (req, res) => {
-  console.log(req.query);
-  let nivelAgua = 0;
+app.get("/nivelAgua", (req, res) => {
+  const { q } = req.query;
+  const nivelAgua = q;
+  console.log("nivelAgua" + nivelAgua);
 
-  res.send("Hello World!");
-});
-
-let modos = {
-  apagado: "0",
-  manual: "1",
-};
-app.post("/modo", (req, res) => {
-  let modoDefault = "1";
-  console.log(req.query.modo);
-  if (req.query.modo == "apagado") {
-    return res.send(modos.apagado);
-  } else if (req.query.modo == "manual") {
-    console.log("here");
-    return res.send(modos.manual);
+  if (q === undefined) {
+    return res.send("Nivel de agua: " + 0 + " - " + "Bomba desligada");
   }
-  // return res.send(modoDefault);
+
+  return res.send("Nivel de agua: " + nivelAgua);
 });
 
 app.listen(3000, () => {
